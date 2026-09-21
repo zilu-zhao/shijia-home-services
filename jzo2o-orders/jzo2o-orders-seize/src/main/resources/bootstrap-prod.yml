@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: ${NACOS_ADDR}
+      config:
+        namespace: ${NACOS_NAMESPACE}
+        file-extension: yaml
+      discovery:
+        namespace: ${NACOS_NAMESPACE}
+logging:
+  level:
+    com.jzo2o: debug

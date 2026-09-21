@@ -1,0 +1,33 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Java
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# 日志
+logs/
+*.log
+
+# 前端
+node_modules/
+dist/
+unpackage/
+.npm
+.pnpm-store/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 本地配置
+application-local.yml
+application-local.yaml
+*.local

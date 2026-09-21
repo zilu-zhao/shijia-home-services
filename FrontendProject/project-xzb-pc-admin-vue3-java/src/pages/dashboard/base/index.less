@@ -1,0 +1,317 @@
+.headBox {
+  padding-bottom: 9.5px;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 23.5px;
+
+  :deep(.sw-box) {
+    .title {
+      color: var(--color-bk2);
+      width: 64px;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 30px;
+      //  文字左右居中
+      text-align: center;
+    }
+
+    .line {
+      color: var(--color-main);
+      font-weight: 500;
+    }
+  }
+}
+
+.formBox {
+
+  .btn-search,
+  .btn-reset {
+    width: 60px;
+    border-radius: 3px;
+    height: 32px;
+  }
+}
+
+.tableBox {
+  padding: 24px 32px;
+  height: 136px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.t-col-2 {
+  display: flex;
+}
+
+
+.operate {
+  margin-left: 21px;
+  margin-bottom: 15px;
+  font-family: PingFangSC-SNaNpxibold;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-bk1);
+
+  span {
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 7px;
+  }
+}
+
+.statistics {
+  background-color: #fff;
+  padding: 16px 21px 20px;
+  margin-bottom: 20px;
+
+  .tips {
+    height: 40px;
+    background: #e8f6ff;
+    line-height: 40px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    color: var(--color-bk1);
+    font-size: 14px;
+
+    span {
+      background-image: url('../../../assets/icon_zhuyi@2x.png');
+      display: inline-block;
+      background-size: 100% 100%;
+      width: 19px;
+      height: 19px;
+      margin-right: 10px;
+    }
+  }
+
+  .export {
+    display: flex;
+    justify-content: space-between;
+
+    .bt {
+      width: 78px;
+    }
+  }
+}
+
+.home-wrapper {
+  :deep(.t-card__header-wrapper) {
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-bk1);
+  }
+
+  .division {
+    height: 24.5px;
+    width: 100%;
+    background-color: #fafafa;
+    display: inline-block;
+    // 独占一行
+    vertical-align: top;
+  }
+
+  .row-container:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  :deep(.t-card__body) {
+    padding-top: 0;
+  }
+
+  :deep(a) {
+    cursor: pointer;
+  }
+
+  :deep(a:active) {
+    color: #1c55cf;
+  }
+
+  :deep(a:hover) {
+    color: rgba(0, 97, 253, 0.8);
+  }
+
+  :deep(.t-range-input.t-is-disabled) {
+    background-color: transparent;
+  }
+
+  :deep(.t-input.t-is-disabled) {
+    background-color: transparent;
+  }
+
+  :deep(.t-date-range-picker) {
+    width: 270px;
+  }
+
+  :deep(.t-input.t-is-disabled .t-input__inner) {
+    color: var(--color-bk3);
+    margin-left: 18px;
+  }
+
+  .analysis {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+
+    .leftCard,
+    .rightCard {
+      padding: 18px 21px;
+      height: 166px;
+      background-color: #fff;
+
+      .title {
+        margin-bottom: 25px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--color-bk1);
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .description {
+          display: flex;
+          margin-left: 4px;
+
+          .beizhu {
+            background-image: url('@/assets/icon_beizhu@2x.png');
+            background-size: 100% 100%;
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+          }
+
+          .hover {
+            display: none;
+            position: absolute;
+            // 位于div上方中间位置
+            width: 334px;
+            top: 30px;
+            right: -165px;
+            font-size: 12px;
+            background-color: #fff;
+            line-height: 17px;
+            box-shadow: 0 0 8px 1px rgba(34, 40, 51, 0.12);
+            border-radius: 4px;
+            padding: 15px;
+            color: var(--color-bk1);
+            word-break: break-all;
+            z-index: 100;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: -5px;
+              left: 47.5%;
+              width: 10px;
+              height: 10px;
+              transform: rotate(45deg);
+              background-color: #fff;
+              // box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.05);
+            }
+          }
+
+          &:hover {
+            .beizhu {
+              background-image: url('@/assets/icon_beizhu_sel@2x.png');
+              background-size: 100% 100%;
+            }
+
+            .hover {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .cardBox {
+        display: flex;
+
+        .card {
+          width: 33.333%;
+          position: relative;
+
+          .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .num {
+              font-family: PingFangSC-SNaNpxibold;
+              font-weight: 600;
+              font-size: 32px;
+              height: 39px;
+              line-height: 39px;
+              color: var(--color-bk1);
+
+              span {
+                font-size: 14px;
+              }
+            }
+
+            .title {
+              font-family: PingFangSC-Regular;
+              font-weight: 400;
+              font-size: 14px;
+              height: 22px;
+              line-height: 22px;
+              margin-bottom: 13px;
+              color: var(--color-bk4);
+            }
+          }
+
+          .line {
+            width: 1px;
+            height: 40px;
+            background-color: #e0e0e0;
+            position: absolute;
+            top: 13px;
+          }
+
+          &:first-child {
+            .line {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .leftCard {
+      // 宽为父元素宽减20px后的53.6%
+      width: calc((100% - 20px) * 0.546);
+      margin-right: 20px;
+    }
+
+    .rightCard {
+      // 宽为父元素宽减20px后的
+      width: calc((100% - 20px) * 0.454);
+
+      .cardBox {
+        .card {
+          width: 50%;
+
+          &:last-child {
+            .description {
+              .hover {
+                width: 246px;
+                right: -70px;
+
+                &::after {
+                  left: 66.5%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
